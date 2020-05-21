@@ -3,7 +3,7 @@
 ;; Copyright (C) 2005, 2016 P J Heslin
 ;;
 ;; Author: Peter Heslin <p.j.heslin@dur.ac.uk>
-;; URL: http://www.dur.ac.uk/p.j.heslin/Software/Emacs/Download/tei-html-docs-p5.el
+;; URL: https://github.com/pjheslin/emacs-tei-docs
 ;; Version: 2.0
 ;;
 ;; This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3, or (at your option) any later version.
@@ -58,7 +58,7 @@
             (message "%s" (concat "Error: element "
                                   (match-string 1) " not found in docs"))))
       (message "%s" "Error: no element found."))))
-  
+
 
 ;; Almost all, but unfortunately not quite all of the files are of the
 ;; form ref-element.html.  For some reason, some element names have
@@ -68,7 +68,7 @@
 ;;
 ;; grep h1 ref-* | perl -ne 'print "(\"", m/&lt;(.*?)&gt;/, "\" \"", m/(ref-.*?html)/, "\")\n"'  | grep -v '^(""'
 
-(defvar tei-html-docs-p5-element-alist 
+(defvar tei-html-docs-p5-element-alist
   `(("abbr" "ref-abbr.html")
 ("ab" "ref-ab.html")
 ("accMat" "ref-accMat.html")
@@ -569,4 +569,3 @@
 
 
 (provide 'tei-html-docs-p5)
-

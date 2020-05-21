@@ -3,7 +3,7 @@
 ;; Copyright (C) 2004-5 P J Heslin
 ;;
 ;; Author: Peter Heslin <p.j.heslin@dur.ac.uk>
-;; URL: http://www.dur.ac.uk/p.j.heslin/Software/Emacs/Download/tei-html-docs-p4.el
+;; URL: https://github.com/pjheslin/emacs-tei-docs
 ;; Version: 1.0
 ;;
 ;; This program is free software; you can redistribute it and/or modify
@@ -80,7 +80,7 @@
             (message "%s" (concat "Error: element "
                                   (match-string 1) " not found in docs"))))
       (message "%s" "Error: no element found."))))
-  
+
 
 ;; Almost all, but unfortunately not quite all of the files are of the
 ;; form ref-ELEMENT.html.  For some reason, some element names have
@@ -90,7 +90,7 @@
 ;;
 ;; grep h1 ref-* | perl -ne 'print "(\"", m/&lt;(.*?)&gt;/, "\" \"", m/(ref-.*?html)/, "\")\n"'  | grep -v '^(""'
 
-(defvar tei-html-docs-p4-element-alist 
+(defvar tei-html-docs-p4-element-alist
   `(("abbr" "ref-ABBR.html")
     ("activity" "ref-ACTIVITY.html")
     ("actor" "ref-ACTOR.html")
@@ -535,4 +535,3 @@
   "Translate element names to doc files.")
 
 (provide 'tei-html-docs-p4)
-
